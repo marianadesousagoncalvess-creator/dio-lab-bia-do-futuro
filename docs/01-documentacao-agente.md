@@ -5,64 +5,74 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas não conseguem controlar seus gastos ao longo do mês e só percebem o problema quando o dinheiro já está acabando ou quando entram no limite do cartão de crédito. A falta de acompanhamento em tempo real dificulta a tomada de decisão e pode levar ao endividamento.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente atua de forma proativa monitorando os gastos do usuário com base na sua renda e despesas registradas. Ele analisa o percentual de renda já comprometido e identifica riscos, como excesso de gastos ou aproximação do limite financeiro.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+O agente é voltado para pessoas que desejam melhorar sua organização financeira, especialmente:
+-  Pessoas com dificuldade em controlar gastos mensais;
+-  Usuários com renda limitada que precisam evitar endividamento;]
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+FinGuard (Agente Financeiro de Alerta de Gastos)
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+- Consultiva
+- Educativa
+- Proativa
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Acessível, educativa e semi-formal.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Estou aqui para te ajudar a cuidar melhor das suas finanças. Como posso te ajudar hoje?"
+- Confirmação: "Entendi! Vou analisar suas informações e já te passo algumas orientações para melhorar seu controle financeiro."
+- Erro/Limitação: "No momento, não tenho todas as informações necessárias para uma análise completa, mas posso te orientar com algumas dicas gerais para melhorar sua organização financeira."
 
 ---
 
 ## Arquitetura
 
-### Diagrama
+### Diagrama 
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+
+A[Usuário] --> B[Entrada de dados<br>Renda, gastos, dívidas]
+
+B --> C[Processamento<br>Análise financeira]
+
+C --> D[Regras de validação<br>% da renda comprometida]
+
+D --> E[IA / LLM<br>Geração de alerta]
+
+E --> F[Resposta ao usuário<br>Alertas e recomendações]
+
+
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Chatbot em Streamlit |
+| LLM | GPT-4 via API |
+| Base de Conhecimento | JSON/CSV com dados do cliente, incluindo renda, gastos e categorias financeiras |
+| Validação | Regras de negócio para checagem de limites de gastos e prevenção de respostas inconsistentes |
 
 ---
 
@@ -70,12 +80,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] O agente responde apenas com base nas informações fornecidas pelo usuário (renda, gastos e despesas).
+- [x] Quando não possui dados suficientes, informa a limitação e oferece orientações gerais.
+- [x] Utiliza regras de validação, como percentual de renda comprometida, para evitar respostas incoerentes.
+- [x] Evita recomendações de investimento ou crédito sem conhecer o perfil financeiro completo do usuário.
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- O agente não substitui um profissional financeiro ou consultor especializado;
+- Não realiza integração com dados bancários reais ou atualizações automáticas de gastos;
+- Não garante previsões financeiras exatas, pois depende das informações fornecidas pelo usuário;
+- Não fornece recomendações de investimento ou crédito personalizadas sem análise completa do perfil financeiro.
