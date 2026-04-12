@@ -62,7 +62,7 @@ Recomendo definir um limite mensal para alimentação e tentar reduzir pedidos d
 
 **Usuário:**
 ```
-Qual a previsão do tempo para amanhã?]
+Qual a previsão do tempo para amanhã?
 ```
 
 **Agente:**
