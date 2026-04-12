@@ -4,15 +4,13 @@
 
 Descreva se usou os arquivos da pasta `data`, por exemplo:
 
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Utilização no agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `dados_usuario.json` | JSON | Armazena renda mensal, gastos fixos e objetivos financeiros do usuário |
+| `transacoes.csv` | CSV | Registra gastos diários para análise de padrão de consumo |
+| `categorias_gastos.json` | JSON | Define categorias como alimentação, transporte, lazer e seus limites |
+| `regras_financeiras.json` | JSON | Contém regras como percentual máximo de gastos e critérios para geração de alertas |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
 
 ---
 
@@ -20,7 +18,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Os dados utilizados no projeto foram adaptados para representar um cenário real de controle financeiro pessoal.
 
 ---
 
@@ -29,12 +27,12 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os dados em JSON e CSV são carregados no início da interação e utilizados como base para análise do agente. Essas informações são incluídas no contexto do processamento, permitindo que a IA gere alertas e recomendações com base nos dados do usuário.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados do usuário são incluídos dinamicamente no contexto do prompt, permitindo que a IA analise as informações antes de gerar a resposta.
 
 ---
 
