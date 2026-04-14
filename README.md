@@ -138,7 +138,6 @@ O FinGuard IA demonstra como a Inteligência Artificial pode ser aplicada para m
 
 ---
 
-## 👩‍💻 Autor
-
+## 👩‍💻 Autora
 Mariana Gonçalves
 Projeto desenvolvido para a DIO 🚀
