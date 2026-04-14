@@ -1,149 +1,146 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
 
-## Contexto
+# 💰 FinGuard IA - Agente Financeiro com IA Generativa
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+## 📌 Contexto
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Os assistentes virtuais financeiros estão evoluindo de chatbots simples para agentes inteligentes e proativos.
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+O **FinGuard IA** foi desenvolvido como um agente financeiro que utiliza Inteligência Artificial para:
 
----
-
-## O Que Você Deve Entregar
-
-### 1. Documentação do Agente
-
-Defina **o que** seu agente faz e **como** ele funciona:
-
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+* Antecipar problemas financeiros antes que aconteçam
+* Analisar gastos e identificar riscos
+* Oferecer orientações personalizadas
+* Ajudar o usuário a tomar decisões mais conscientes
 
 ---
 
-### 2. Base de Conhecimento
+## 🎯 Problema
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Muitas pessoas têm dificuldade em controlar seus gastos e só percebem o descontrole quando o dinheiro já está acabando ou quando entram em dívidas.
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+A falta de acompanhamento e de alertas ao longo do mês dificulta a organização financeira.
 
 ---
 
-### 3. Prompts do Agente
+## 💡 Solução
 
-Documente os prompts que definem o comportamento do seu agente:
+O **FinGuard IA** atua como um assistente financeiro inteligente que:
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+* Analisa renda e despesas do usuário
+* Identifica padrões de consumo
+* Gera alertas de risco financeiro
+* Sugere ações práticas para controle de gastos
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
+Diferente de um chatbot comum, o agente é **proativo**, antecipando problemas e orientando o usuário antes que o descontrole aconteça.
 
 ---
 
-### 5. Avaliação e Métricas
+## ⚙️ Funcionalidades
 
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+* 📊 Análise de gastos mensais
+* ⚠️ Alertas de risco financeiro
+* 💡 Recomendações personalizadas
+* 📉 Cálculo do percentual da renda comprometida
 
 ---
 
-### 6. Pitch
+## 🧠 Tecnologias Utilizadas
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+* Python
+* Streamlit
+* Lógica de IA (simulada com regras e prompts)
 
 ---
 
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
+## 📁 Estrutura do Projeto
 
 ```
-📁 lab-agente-financeiro/
+lab-agente-financeiro/
 │
-├── 📄 README.md
+├── README.md
 │
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
+├── data/
+│   ├── transacoes.csv
+│   ├── dados_usuario.json
+│   └── regras_financeiras.json
 │
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
+├── docs/
+│   ├── 01-documentacao-agente.md
+│   ├── 02-base-conhecimento.md
+│   ├── 03-prompts.md
+│   ├── 04-metricas.md
+│   └── 05-pitch.md
 │
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
+├── src/
+│   └── app.py
 │
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
+├── assets/
 │
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+└── examples/
 ```
 
 ---
 
-## Dicas Finais
+## 🚀 Como Executar
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+1. Instale o Streamlit:
+
+```
+pip install streamlit
+```
+
+2. Execute o projeto:
+
+```
+python -m streamlit run app.py
+```
+
+3. Acesse no navegador:
+
+```
+http://localhost:8501
+```
+
+---
+
+## 🎥 Demonstração
+
+Veja o funcionamento do projeto no vídeo abaixo:
+
+🔗 [Assistir demonstração](https://drive.google.com/file/d/1oIaOfr53BkUXZtYWaiPaurTtJ6z1gMsI/view?usp=sharing)
+
+---
+
+## 🔒 Segurança
+
+O agente foi desenvolvido com foco em confiabilidade:
+
+* Não inventa informações financeiras
+* Utiliza apenas dados fornecidos
+* Evita recomendações arriscadas
+* Solicita mais informações quando necessário
+
+---
+
+## 📊 Avaliação
+
+O agente foi avaliado com base em:
+
+* Assertividade das respostas
+* Clareza das orientações
+* Segurança (anti-alucinação)
+* Coerência com os dados do usuário
+
+---
+
+## 🏆 Conclusão
+
+O FinGuard IA demonstra como a Inteligência Artificial pode ser aplicada para melhorar a organização financeira pessoal, ajudando usuários a evitar dívidas e desenvolver hábitos mais saudáveis.
+
+---
+
+## 👩‍💻 Autora
+
+Mariana Gonçalves
+Projeto desenvolvido para a DIO 🚀
+
